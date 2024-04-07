@@ -9,15 +9,15 @@ modded class SCR_ConsumableEffectHealthItems : SCR_ConsumableEffectBase
 	
 	// How close to the player can the loose resource spawn?
 	[Attribute(defvalue: "0.25", uiwidget: UIWidgets.Slider, desc: "Minimum spawn radius", "0.01 1")]
-	protected float m_minSpawnRadius = 0.25;
+	protected float m_minSpawnRadius;
 	
 	// How far away from the player can the loose resource spawn?
 	[Attribute(defvalue: "0.3", uiwidget: UIWidgets.Slider, desc: "Maximum spawn radius", "0.01 2")]
-	protected float m_maxSpawnRadius = 0.3;
+	protected float m_maxSpawnRadius;
 	
 	// When looking for a place to put our loose resource, how far down should we trace to find ground?
 	[Attribute(defvalue: "-2", uiwidget: UIWidgets.Slider, desc: "Placement trace distance", "-10 -2")]
-	protected float m_placementTraceDownDist = -2;
+	protected float m_placementTraceDownDist;
 	
 	// Called when the consumable effect has finished.
 	override void ApplyEffect(notnull IEntity target, notnull IEntity user, IEntity item, ItemUseParameters animParams)
